@@ -10,6 +10,7 @@ import 'normalize.css'
 import axios from 'axios'    //不是vue插件，导入之后只能在模块使用
 
 import api, { domain } from './js/api.js'
+import './less/index.less'
 
 Vue.use(ElementUI)
 
