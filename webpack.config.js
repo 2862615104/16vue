@@ -94,6 +94,6 @@ module.exports = {
         port: 7777,
         open: true,
         inline: true,
-        progress: true,
+        progress: '个人的',
     }
 };
