@@ -1,6 +1,9 @@
 <template>
   <div class="login">
     <section>
+       <div class="login_content">
+                <img src="../../assets/logo.png" alt="logo">
+            </div>
       <!-- model用来设置表单所有字段, rules用来设置表单校验规则的(可省略, 但是如果需要表单校验功能, 必须写)  -->
       <el-form :model="ruleForm2" :rules="rules2" label-position="top" status-icon ref="abc" label-width="100px" class="demo-ruleForm">
 
@@ -16,9 +19,9 @@
 
         <el-form-item>
           <el-button type="warning" plain @click="submitForm('abc')">登陆</el-button>
-          <el-button @click="resetForm('abc')">重置</el-button>
+          <el-button type="danger" round  @click="resetForm('abc')">重置</el-button>
         </el-form-item>
-
+  
       </el-form>
     </section>
   </div>
@@ -29,10 +32,12 @@
 export default {
   data() {
     return {
+      
+      
       // 这里的字段要按照接口文档进行修改
       ruleForm2: {
-        uname: "",
-        upwd: ""
+        uname: "admin",
+        upwd: "123456"
       },
 
       // 这里添加的校验规则, 每个字段可以加多个, 所以是个数组
@@ -87,8 +92,11 @@ export default {
 <style scoped lang="less">
 .login {
   height: 100%;
-  background-color: aqua;
-
+    background-color:#f60;
+    &_content{
+      text-align:center;
+      padding-bottom:10px;
+    }
   section {
     width: 300px;
     height: 300px;
@@ -99,6 +107,7 @@ export default {
     transform: translateY(-50%);
     border: 3px solid #fff;
     border-radius: 30px;
+      background-color: #267cb7;
   }
 }
 </style>

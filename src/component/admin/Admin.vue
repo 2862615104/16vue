@@ -13,8 +13,9 @@
 
           <!-- 左边 -->
           <app-aside></app-aside>
-
+            
         </el-aside>
+        <router-view></router-view>
       </el-container>
     </el-container>
   </div>
@@ -25,11 +26,12 @@ import Header from "./subcom/Header.vue";
 import Aside from "./subcom/Aside.vue";
 
 export default {
-  components: {
-    appHeader: Header,
-    appAside: Aside
-  }
-};
+  
+      components: {
+        appHeader: Header,
+        appAside: Aside
+      }
+    };
 </script>
 
 <style scoped lang="less">
@@ -44,10 +46,10 @@ export default {
   }
   //&在less中是对上级选择器的引用
   &_content {
-    background-color: red;
+    background-color: #cccc;
   }
   .el-aside {
-    background-color: #f60;
+    // background-color: #f60;
   }
 }
 </style>
