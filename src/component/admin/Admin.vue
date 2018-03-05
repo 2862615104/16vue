@@ -1,24 +1,24 @@
 <template>
   <div class="admin">
+       <el-container>
 
-    <el-container>
-      <el-header>
+           <!-- 公共头部 -->
+           <el-header>
+             <app-header></app-header>
+           </el-header>
 
-        <!-- 公共头部 -->
-        <app-header></app-header>
-
-      </el-header>
-      <el-container class="admin_content">
-        <el-aside width="200px">
-
-          <!-- 左边 -->
-          <app-aside></app-aside>
-            
-        </el-aside>
-        <router-view></router-view>
-      </el-container>
-    </el-container>
-  </div>
+           <el-container class="admin_content">
+               <!-- 公共左侧 -->
+               <el-aside width="200px">
+                 <app-aside></app-aside>
+               </el-aside>
+               <!-- 变化的后台管理子页面 -->
+               <el-main>
+                   <router-view></router-view>
+               </el-main>
+           </el-container>
+       </el-container>
+     </div>
 </template>
 
 <script>
@@ -39,7 +39,8 @@ export default {
   height: 100%;
   color: #333;
   .el-header {
-    line-height: 60px;
+     background-color: #B3C0D1;
+     line-height: 60px;
   }
   .el-container {
     height: 100%;
@@ -52,4 +53,5 @@ export default {
     // background-color: #f60;
   }
 }
+
 </style>
