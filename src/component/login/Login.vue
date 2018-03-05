@@ -59,7 +59,8 @@ export default {
                localStorage.setItem('uname',res.data.message.uname)
                
                //组件就拥有了该对象，对象有一个push方式，可以进行路由跳转
-               this.$router.push({name:'admin'})
+               let nextPage=this.$route.query.next ||'admin'
+               this.$router.push({name: nextPage})
              }
            });
         } else {

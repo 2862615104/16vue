@@ -53,7 +53,7 @@
             <el-form-item>
                 <el-button type="danger" plain @click="onSubmit">保存</el-button>
                 <el-button type="warning" plain @click="$router.go(-1)">返回上一页</el-button>
-            </el-form-item>
+            </el-form-item> 
         </el-form>
     </div>
 </template>
@@ -97,7 +97,8 @@ export default {
     //上传封面
     uploadImg(data) {
         console.log('上传成功');
-        this.ruleForm.imgList[data]
+        this.ruleForm.imgList=[data]
+        // this.ruleForm.imgList=[data]
     },
     //上传附近
     uploadFile(data){
